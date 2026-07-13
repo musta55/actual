@@ -38,6 +38,7 @@ that's why you install it yourself).
 ```bash
 git clone <repository-url>
 cd actual
+
 yarn install
 ```
 
