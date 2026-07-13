@@ -38,6 +38,9 @@ packages/desktop-client/service-worker
 packages/plugins-service/dist
 packages/component-library/dist
 packages/loot-core/lib-dist
+# Generated test/demo budgets (created when tests or the app open a budget)
+packages/loot-core/src/mocks/files/budgets/*
+!packages/loot-core/src/mocks/files/budgets/.commit-to-git
 **/.tsbuildinfo
 packages/sync-server/coverage
 bundle.desktop.js

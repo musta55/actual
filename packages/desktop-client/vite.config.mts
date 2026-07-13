@@ -166,7 +166,10 @@ const lootCoreBackend = (): Plugin => ({
         'development',
         '--watch',
       ],
-      { cwd: lootCoreRoot, stdio: 'inherit' },
+      // `shell: true` is required on Windows so the bare `yarn` command
+      // resolves to `yarn.cmd` via PATHEXT; without it Node's spawn fails with
+      // ENOENT and the loot-core backend (served at /kcab) never builds.
+      { cwd: lootCoreRoot, stdio: 'inherit', shell: true },
     );
     child.on('error', err => {
       server.config.logger.error(

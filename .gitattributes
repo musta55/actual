@@ -11,6 +11,9 @@
 *.ts text eol=lf
 *.sh text eol=lf
 *.tsx text eol=lf
+# Vitest snapshots are written with LF; pin them so Windows autocrlf doesn't
+# flag every test run as a diff.
+*.snap text eol=lf
 
 **/bin/* text eol=lf
 
